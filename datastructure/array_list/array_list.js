@@ -23,10 +23,10 @@ class CustomArray {
     if (index < this.count && index >= 0) {
       // shift left
       for (let i = index; i < this.count - 1; i++) {
+        this.array[i] = this.array[i + 1];
         if (i + 1 == this.count - 1) {
           this.array[i + 1] = null;
-        } else {
-          this.array[i] = this.array[i + 1];
+          break;
         }
       }
       //decrease count
